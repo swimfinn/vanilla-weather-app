@@ -1,22 +1,37 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "roboto";
+  padding: 40px;
+  position: static;
 }
-
-.weather-app {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 20px;
+#weatherApp {
   border: 1px solid #dadde1;
-  border-radius: 5px;
+  border-radius: 20px;
+  width: 510px;
+  height: 225px;
+  padding: 20px auto;
+  margin: 0 auto;
 }
-
-h1 {
-  color: rgb(135, 135, 135);
-  display: block;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 28px;
-  margin-bottom: 0;
+.form-control {
+  height: 38px;
+  width: 224px;
+  border-color: #dadde1;
+}
+#search-button {
+  position: relative;
+  left: 255px;
+  top: -37px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 20%;
+}
+#current {
+  position: relative;
+  right: -380px;
+  top: -91px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 20%;
+  background-color: #218838;
 }
 
 ul {
@@ -25,11 +40,70 @@ ul {
 }
 
 li {
-  list-style: none;
+  list-style-type: none;
+  color: #70757a;
   margin: 0;
   padding: 0;
-  color: rgb(135, 135, 135);
-  font-size: 16px;
-  font-weight: 100;
-  height: 19px;
+}
+
+.country {
+  font-size: 24px;
+  position: relative;
+  top: -110px;
+  margin-bottom: 0;
+}
+.day {
+  position: relative;
+  top: -110px;
+}
+.weather {
+  position: relative;
+  top: -115px;
+}
+.temp {
+  color: black;
+  position: relative;
+  font-weight: 900px;
+  font-size: 64px;
+  top: -120px;
+  left: 0px;
+}
+.cf {
+  color: black;
+  font-size: 25px;
+  position: relative;
+  top: -200px;
+  left: 75px;
+}
+sup {
+  color: black;
+  text-decoration-color: #ffffff;
+}
+
+#day-input,
+#time-input,
+#hour-input,
+#minutes-input,
+#colon,
+#line {
+  color: #70757a;
+  text-decoration: none;
+}
+.humidity {
+  position: relative;
+  top: -320px;
+  left: 250px;
+}
+.wind {
+  position: relative;
+  top: -320px;
+  left: 250px;
+}
+
+#icon {
+  color: #f49d26;
+  font-size: 58px;
+  position: relative;
+  left: 110px;
+  top: -240px;
 }
