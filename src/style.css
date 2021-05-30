@@ -44,18 +44,12 @@ button {
   background-image: url(https://media.giphy.com/media/AxVvjYP5ruIj3FfrS8/giphy.gif);
 }
 
-.form-control::-webkit-input-placeholder {
+input[type="text"] {
   color: white;
 }
 
-::-moz-selection {
+input.custom {
   color: white;
-}
-
-[type="search"] {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  appearance: textfield;
 }
 
 #search-button {
