@@ -5,14 +5,23 @@ body {
 }
 
 .weather-app-wrapper {
-  max-width: 510px;
+  max-width: 600px;
   margin: 30px auto;
+  border-radius: 30px;
+}
+
+.weather-app-border {
+  background: linear-gradient(0.25turn, #d9e2e3, #f7f7f7, #767676);
+  margin: 30px auto;
+  padding: 35px;
 }
 
 #weatherApp {
   border: 1px solid #dadde1;
   height: 325px;
   padding: 20px auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0.9;
 }
 .form-control {
   height: 38px;
