@@ -112,6 +112,10 @@ li {
   left: 75px;
 }
 
+a {
+  text-decoration: none;
+}
+
 #day-input,
 #time-input,
 #hour-input,
