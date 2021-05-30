@@ -141,6 +141,10 @@ a {
   left: 250px;
 }
 
+#miles {
+  text-transform: lowercase;
+}
+
 #current-icon {
   position: relative;
   font-size: 58px;
