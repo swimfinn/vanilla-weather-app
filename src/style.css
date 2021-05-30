@@ -44,11 +44,11 @@ button {
   background-image: url(https://media.giphy.com/media/AxVvjYP5ruIj3FfrS8/giphy.gif);
 }
 
-.form-control:::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder {
   color: white;
 }
 
-::-webkit-input-placeholder {
+::-moz-selection {
   color: white;
 }
 
@@ -128,20 +128,20 @@ li {
 }
 .humidity {
   position: relative;
-  top: -300px;
+  top: -330px;
   left: 250px;
 }
 .wind {
   position: relative;
-  top: -303px;
+  top: -335px;
   left: 250px;
 }
 
-.current-icon {
+#current-icon {
   position: relative;
   font-size: 58px;
-  left: 110px;
-  top: -240px;
+  left: 120px;
+  top: -255px;
 }
 
 .weather-temperature {
@@ -160,30 +160,30 @@ li {
   margin: 0 auto;
   padding: 15px;
   position: relative;
-  top: -285px;
+  top: -320px;
   left: -200px;
 }
 
 #dayTwo {
   position: relative;
-  top: -383px;
+  top: -420px;
   left: -100px;
 }
 
 #dayThree {
   position: relative;
-  top: -467px;
+  top: -503px;
 }
 
 #dayFour {
   position: relative;
-  top: -550px;
+  top: -585px;
   left: 100px;
 }
 
 #dayFive {
   position: relative;
-  top: -634px;
+  top: -670px;
   left: 200px;
 }
 
