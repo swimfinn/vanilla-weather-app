@@ -29,8 +29,8 @@ body {
 .form-control {
   height: 38px;
   width: 224px;
-  border-color: #dadde1;
 }
+
 #search-button {
   position: relative;
   left: 255px;
@@ -77,7 +77,6 @@ li {
   top: -115px;
 }
 .temp {
-  color: black;
   position: relative;
   font-weight: 900px;
   font-size: 64px;
@@ -85,16 +84,10 @@ li {
   left: 0px;
 }
 .cf {
-  color: black;
   font-size: 25px;
   position: relative;
   top: -195px;
   left: 75px;
-}
-
-sup {
-  color: black;
-  text-decoration-color: #ffffff;
 }
 
 #day-input,
@@ -103,7 +96,6 @@ sup {
 #minutes-input,
 #colon,
 #line {
-  color: #70757a;
   text-decoration: none;
 }
 .humidity {
