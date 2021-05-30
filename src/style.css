@@ -137,8 +137,7 @@ li {
   left: 250px;
 }
 
-#sun-icon {
-  color: #f49d26;
+.current-icon {
   position: relative;
   font-size: 58px;
   left: 110px;
