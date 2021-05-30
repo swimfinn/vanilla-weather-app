@@ -1,15 +1,18 @@
 body {
   font-family: "roboto";
-  padding: 40px;
+  padding: 20px;
   position: static;
 }
+
+.weather-app-wrapper {
+  max-width: 510px;
+  margin: 30px auto;
+}
+
 #weatherApp {
   border: 1px solid #dadde1;
-  border-radius: 20px;
-  width: 510px;
   height: 225px;
   padding: 20px auto;
-  margin: 0 auto;
 }
 .form-control {
   height: 38px;
