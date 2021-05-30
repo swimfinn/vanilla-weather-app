@@ -24,6 +24,7 @@ function formatDate(date) {
 }
 
 function displayWeatherCondition(response) {
+    console.log(response.data);
     document.querySelector("#city-input").innerHTML = response.data.name;
     document.querySelector("#currentTemp").innerHTML = Math.round(
         response.data.main.temp
@@ -39,7 +40,7 @@ function displayWeatherCondition(response) {
 
 function searchCity(city) {
     let apiKey = "3a8d7f059fc61ac00591426445cb607a";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&cnt=6&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(displayWeatherCondition);
 }
 
