@@ -25,15 +25,20 @@ function formatDate(date) {
 
 function displayWeatherCondition(response) {
     document.querySelector("#city-input").innerHTML = response.data.name;
-    document.querySelector("#currentTemp").innerHTML = Math.round(
+
+    let temperatureElement = document.querySelector("#currentTemp");
+    temperatureElement.innerHTML = Math.round(
         response.data.main.temp
     );
-    document.querySelector("#humidity-input").innerHTML =
+    let humidityElement = document.querySelector("#humidity-input")
+    humidityElement.innerHTML =
         response.data.main.humidity;
-    document.querySelector("#wind-input").innerHTML = Math.round(
+    let windElement = document.querySelector("#wind-input")
+    windElement.innerHTML = Math.round(
         response.data.wind.speed
     );
-    document.querySelector("#weather-description").innerHTML =
+    let descriptionElement = document.querySelector("#weather-description")
+    descriptionElement.innerHTML =
         response.data.weather[0].description;
     let iconElement = document.querySelector("#current-icon");
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -81,3 +86,15 @@ let searchButton = document.querySelector("#search-button");
 searchButton.addEventListener("click", handleSubmit);
 
 searchCity("Portland");
+
+function displayCTemp(event) {
+    event.preventDefault();
+    let celsiusTemp = (67 - 32) * 5 / 9;
+    alert(celsiusTemp);
+    let temperatureElement = document.querySelector("#currentTemp");
+    temperatureElement.innerHTML = displayCTemp;
+
+}
+
+let cTemp = document.querySelector("#cTemp");
+cTemp.addEventListener("click", displayCTemp)
