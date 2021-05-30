@@ -2,6 +2,8 @@ body {
   font-family: "roboto";
   padding: 20px;
   position: static;
+  background-image: url(https://images.pexels.com/photos/1680140/pexels-photo-1680140.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+  color: white;
 }
 
 .weather-app-wrapper {
