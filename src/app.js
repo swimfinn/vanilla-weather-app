@@ -116,3 +116,5 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp)
 
 
 searchCity("Portland");
+
+let backgroundElement = document.querySelector("#weatherApp");
