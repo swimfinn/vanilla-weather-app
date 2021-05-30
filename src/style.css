@@ -22,8 +22,9 @@ body {
   border: 1px solid #dadde1;
   height: 325px;
   padding: 20px auto;
-  background-color: rgba(255, 255, 255, 0.5);
-  opacity: 0.9;
+  background-image: url(https://media.giphy.com/media/AxVvjYP5ruIj3FfrS8/giphy.gif);
+  background-size: 600px;
+  opacity: 0.8;
 }
 .form-control {
   height: 38px;
@@ -55,7 +56,8 @@ ul {
 
 li {
   list-style-type: none;
-  color: #70757a;
+  color: black;
+  font-weight: bolder;
   margin: 0;
   padding: 0;
 }
