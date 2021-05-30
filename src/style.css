@@ -75,7 +75,7 @@ li {
   color: black;
   font-size: 25px;
   position: relative;
-  top: -200px;
+  top: -195px;
   left: 75px;
 }
 sup {
@@ -109,4 +109,12 @@ sup {
   position: relative;
   left: 110px;
   top: -240px;
+}
+
+.weather-temperature {
+  margin-right: 20px;
+}
+
+#currenttemp {
+  line-height: 1;
 }
