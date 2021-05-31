@@ -34,7 +34,6 @@ button {
   padding: 20px auto;
   background-image: url(https://media.giphy.com/media/AxVvjYP5ruIj3FfrS8/giphy.gif);
   background-size: 600px;
-  opacity: 0.8;
 }
 
 .form-control {
@@ -84,6 +83,7 @@ li {
   margin: 0;
   padding: 0;
   text-transform: capitalize;
+  font-size: large;
 }
 
 .country {
@@ -134,12 +134,12 @@ a {
 .humidity {
   position: relative;
   top: -330px;
-  left: 250px;
+  left: 350px;
 }
 .wind {
   position: relative;
   top: -335px;
-  left: 250px;
+  left: 350px;
 }
 
 #miles {
@@ -148,8 +148,8 @@ a {
 
 #current-icon {
   position: relative;
-  font-size: 58px;
-  left: 120px;
+  font-size: xx-large;
+  left: 180px;
   top: -255px;
 }
 
@@ -169,30 +169,30 @@ a {
   margin: 0 auto;
   padding: 15px;
   position: relative;
-  top: -320px;
+  top: -330px;
   left: -200px;
 }
 
 #dayTwo {
   position: relative;
-  top: -420px;
+  top: -432px;
   left: -100px;
 }
 
 #dayThree {
   position: relative;
-  top: -503px;
+  top: -518px;
 }
 
 #dayFour {
   position: relative;
-  top: -585px;
+  top: -605px;
   left: 100px;
 }
 
 #dayFive {
   position: relative;
-  top: -670px;
+  top: -693px;
   left: 200px;
 }
 
@@ -216,26 +216,11 @@ a {
   padding: 10px auto;
 }
 
-#cloud-icon {
-  color: #92959c;
-}
-
-#rain-icon {
-  color: #406c8f;
-}
-
-#bolt-icon {
-  color: #b26da8;
-}
-
-#wind-icon {
-  color: #3858f9;
-}
-
-#snowflake-icon {
-  color: #38eee9;
-}
-
+#cloud-icon,
+#rain-icon,
+#bolt-icon,
+#wind-icon,
+#snowflake-icon,
 .forecastTemp {
   color: white;
   font-weight: bolder;
