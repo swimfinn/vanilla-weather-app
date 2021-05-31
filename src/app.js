@@ -26,6 +26,8 @@ function formatDate(date) {
 function displayWeatherCondition(response) {
     document.querySelector("#city-input").innerHTML = response.data.name;
 
+    console.log(response.data);
+
     let temperatureElement = document.querySelector("#currentTemp");
     temperatureElement.innerHTML = Math.round(
         response.data.main.temp
@@ -117,4 +119,17 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp)
 
 searchCity("Portland");
 
-let backgroundElement = document.querySelector("#weatherApp");
+document.getElementById('stylesheet').href = 'src/style.css';
+
+function enableStylesheet(node) {
+    node.media = 'src/style.css';
+}
+
+document.getElementById("weatherApp").style.backgroundImage = "url(https://media.giphy.com/media/AxVvjYP5ruIj3FfrS8/giphy.gif)";
+
+if (descriptionElement.innerHTML === "Clear Sky") {
+    document.getElementById("weatherApp").style.backgroundImage = "url(http://media.giphy.com/media/ivcVZnZAEqhs4/giphy.gif)";
+} else {
+    document.getElementById("weatherApp").style.backgroundImage = "url(https://media.giphy.com/media/AxVvjYP5ruIj3FfrS8/giphy.gif)"
+}
+

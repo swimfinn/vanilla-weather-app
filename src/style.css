@@ -7,7 +7,6 @@ body {
 }
 
 button {
-  background-image: url(https://media.giphy.com/media/AxVvjYP5ruIj3FfrS8/giphy.gif);
   color: white;
   border-color: white;
 }
@@ -60,6 +59,7 @@ input.custom {
   padding-right: 15px;
   width: 20%;
   border: white 1px solid;
+  background-color: transparent;
 }
 #current {
   position: relative;
@@ -69,6 +69,7 @@ input.custom {
   padding-right: 15px;
   width: 20%;
   border: white 1px solid;
+  background-color: transparent;
 }
 
 ul {
