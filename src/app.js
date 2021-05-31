@@ -120,4 +120,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp)
 searchCity("Portland");
 
 
-
+document.getElementById('stylesheet').href = 'src/style.css';
