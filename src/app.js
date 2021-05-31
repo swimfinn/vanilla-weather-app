@@ -119,17 +119,5 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp)
 
 searchCity("Portland");
 
-document.getElementById('stylesheet').href = 'src/style.css';
 
-function enableStylesheet(node) {
-    node.media = 'src/style.css';
-}
-
-document.getElementById("weatherApp").style.backgroundImage = "url(https://media.giphy.com/media/AxVvjYP5ruIj3FfrS8/giphy.gif)";
-
-if (descriptionElement.innerHTML === "Clear Sky") {
-    document.getElementById("weatherApp").style.backgroundImage = "url(http://media.giphy.com/media/ivcVZnZAEqhs4/giphy.gif)";
-} else {
-    document.getElementById("weatherApp").style.backgroundImage = "url(https://media.giphy.com/media/AxVvjYP5ruIj3FfrS8/giphy.gif)"
-}
 
