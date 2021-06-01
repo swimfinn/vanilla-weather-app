@@ -28,18 +28,17 @@ button {
   padding: 35px;
 }
 
-#weatherApp {
+.backgroundWeather {
   border: 1px solid #dadde1;
   height: 325px;
   padding: 20px auto;
-  background-image: url(https://media.giphy.com/media/AxVvjYP5ruIj3FfrS8/giphy.gif);
   background-size: 600px;
 }
 
 .form-control {
   height: 38px;
   width: 224px;
-  background-image: url(https://media.giphy.com/media/AxVvjYP5ruIj3FfrS8/giphy.gif);
+  background-image: url("https://media.giphy.com/media/AxVvjYP5ruIj3FfrS8/giphy.gif");
 }
 
 input[type="text"] {
