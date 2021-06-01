@@ -44,7 +44,10 @@ function displayWeatherCondition(response) {
         response.data.weather[0].description;
     let iconElement = document.querySelector("#current-icon");
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-    iconElement.setAttribute("alt", response.data.weather[0].description)
+    iconElement.setAttribute("alt", response.data.weather[0].description);
+    let descriptionBackground = document.getElementById("backgroundPic").style.backgroundImage;
+    descriptionBackground.innerHTML = response.data.weather[0].id
+    mainWeather = response.data.weather[0].id;
 }
 
 function searchCity(city) {
@@ -106,6 +109,22 @@ function displayFahrenheitTemp(event) {
     celsiusLink.classList.remove("active");
 }
 
+
+function changeBackground(response, backgroundPic) {
+    let descriptionBackground = document.getElementById(backgroundPic).style.backgroundImage;
+    let clearImage = document.getElementById(backgroundPic).style.backgroundImage = "url('src/images/cloudy.gif')";
+    let defaultImage = descriptionBackground = "url('src/images/clear-day.gif')";
+    mainWeather = response.data.weather.id;
+    if (mainWeather == 800) {
+        return clearImage
+    } else {
+        return defaultImage
+    }
+}
+
+
+let mainWeather = null;
+
 let fahrenheitTemperature = null;
 
 let celsiusLink = document.querySelector("#c-link");
@@ -115,4 +134,3 @@ let fahrenheitLink = document.querySelector("#f-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp)
 
 searchCity("Portland");
-
