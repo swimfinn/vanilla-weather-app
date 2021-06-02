@@ -9,9 +9,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css" id="stylesheet" />
 </head>
-<body>
+<body onload="autoNotify()">
 	<div id="app">
 		<div class="container">
+      <audio controls autoplay>
+        <source src="src/images/classical-song.mp3" type="audio/mpeg">
+      </audio>
       <div class="weather-app-wrapper">
         <div class="weather-app-border" style="border-radius: 10px;">
       <div id="weatherApp" class="card" style="border-radius: 10px;">

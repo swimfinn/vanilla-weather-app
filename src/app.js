@@ -109,7 +109,6 @@ function displayFahrenheitTemp(event) {
     celsiusLink.classList.remove("active");
 }
 
-
 function changeBackground(response, backgroundPic) {
     let descriptionBackground = document.getElementById(backgroundPic).style.backgroundImage;
     let clearImage = document.getElementById(backgroundPic).style.backgroundImage = "url('src/images/cloudy.gif')";
@@ -122,6 +121,11 @@ function changeBackground(response, backgroundPic) {
     }
 }
 
+function loadAudio(audio) {
+    let x = document.getElementById(audio).autoplay;
+    x.autoplay = true;
+    x.load();
+}
 
 let mainWeather = null;
 
