@@ -106,7 +106,7 @@ function changeBackground(mainWeather) {
     else if (mainWeather == 781) {
         return tornadoImage;
     }
-    else if (mainWeather == 802 && 803) {
+    else if (mainWeather == 802) {
         return scatteredImage;
     }
     else if (mainWeather == 803) {
