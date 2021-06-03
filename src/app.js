@@ -109,25 +109,18 @@ function displayFahrenheitTemp(event) {
     celsiusLink.classList.remove("active");
 }
 
-function changeBackground(response, backgroundPic) {
-    let descriptionBackground = document.getElementById(backgroundPic).style.backgroundImage;
-    let clearImage = document.getElementById(backgroundPic).style.backgroundImage = "url('src/images/cloudy.gif')";
-    let defaultImage = descriptionBackground = "url('src/images/clear-day.gif')";
-    mainWeather = response.data.weather.id;
-    if (mainWeather == 800) {
-        return clearImage
+let mainWeather = response.data.weather[0].id;
+
+function changeBackground() {
+    if (mainWeather === 800) {
+        document.body.classList.add("images/clear-day.gif");
     } else {
-        return defaultImage
+        document.body.classList.add("images/mist.gif")
     }
 }
 
-function loadAudio(audio) {
-    let x = document.getElementById(audio).autoplay;
-    x.autoplay = true;
-    x.load();
-}
 
-let mainWeather = null;
+
 
 let fahrenheitTemperature = null;
 
@@ -136,5 +129,6 @@ celsiusLink.addEventListener("click", displayCelsiusTemp)
 
 let fahrenheitLink = document.querySelector("#f-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp)
+
 
 searchCity("Portland");

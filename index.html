@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css" id="stylesheet" />
 </head>
-<body>
+<body SameSite=Lax;>
   <audio autoplay controls id="my_audio" loop="loop" src="src/images/classical-song.mp3" type="audio/mpeg"></audio>
       </script>
 	<div id="app">
@@ -18,10 +18,10 @@
         <div class="weather-app-border" style="border-radius: 10px;">
       <div id="weatherApp" class="card" style="border-radius: 10px;">
         <div class="backgroundWeather rounded shadow" id="backgroundPic" alt="clear" style="background-image: url('src/images/mist.gif'); background-size: 578px; background-repeat: no-repeat;" >  
-				<div class="card-body">
+          <div class="card-body">
 					<div class="mb-3">
 						<form id="search-bar">
-            <input type="text" class="form-control shadow-sm" id="search-text-input" autofocus="on" placeholder="Type a city..." style="background-image: url('src/images/mist.gif')">
+            <input type="text" class="form-control shadow-sm" id="search-text-input" autofocus="on" placeholder="Type a city..." style="background-image: url(src/images/mist.gif)">
 						</form>
 						<button id="search-button" type="button" class="btn btn-primary shadow-sm" id="special-button">Search</button>
 					</div>
@@ -51,7 +51,7 @@
   </li>
   </ul>
   <div class="clearfix weather-temperature">
-  <img src="http://openweathermap.org/img/wn/10d@2x.png" id="current-icon" alt="clear" class="float-left" />
+  <img src="https://openweathermap.org/img/wn/10d@2x.png" SameSite="Strict" id="current-icon" alt="clear" class="float-left" />
 </div>  
 </div>
   <div class="forecast"
