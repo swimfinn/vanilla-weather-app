@@ -173,13 +173,19 @@ a {
 
 #weather-forecast {
   text-align: center;
+  color: white;
+  text-shadow: 2px 2px #494848;
+  position: relative;
+  bottom: 310px;
+}
+
+#weather-forecast-date {
+  font-size: 22px;
+  font-weight: bolder;
 }
 
 #weather-forecast-temperature {
   font-size: 18px;
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px #494848;
 }
 
 .weather-forecast-temperature-mini {
