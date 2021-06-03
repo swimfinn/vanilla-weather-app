@@ -45,9 +45,82 @@ function displayWeatherCondition(response) {
     let iconElement = document.querySelector("#current-icon");
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute("alt", response.data.weather[0].description);
-    let descriptionBackground = document.getElementById("backgroundPic").style.backgroundImage;
-    descriptionBackground.innerHTML = response.data.weather[0].id
-    mainWeather = response.data.weather[0].id;
+
+    document.getElementById("backgroundPic").style.backgroundImage = changeBackground(response.data.weather[0].id);
+    document.getElementById("search-text-input").style.backgroundImage = changeBackground(response.data.weather[0].id);
+    document.getElementById("::placeholder").style.backgroundImage = changeBackground(response.data.weather[0].id);
+    mainweather = response.data.weather[0].id;
+}
+
+
+
+function changeBackground(mainWeather) {
+    let clearImage = "url('src/images/clear-day.gif')";
+    let defaultImage = "url('src/images/mist.gif')";
+    let stormImage = "url('src/images/thunderstorm.gif')";
+    let drizzleImage = "url('src/images/drizzle.gif')";
+    let rainImage = "url('src/images/rain.gif')";
+    let snowImage = "url('src/images/snow.gif')";
+    let smokeImage = "url('src/images/smoke.gif')";
+    let hazeImage = "url('src/images/haze.gif')";
+    let sandImage = "url('src/images/sand.gif')";
+    let ashImage = "url('src/images/ash.gif')";
+    let scatteredImage = "url('src/images/scattered-clouds.gif')";
+    let fewImage = "url('src/images/few.gif')";
+    let overcastImage = "url('src/images/overcast.gif')";
+    let squallImage = "url('src/images/squall.gif')";
+    let tornadoImage = "url('src/images/tornado.gif')";
+    let dustImage = "url('src/images/dust.gif')";
+    if (mainWeather == 800) {
+        return clearImage;
+    } else if (mainWeather >= 200 && mainWeather <= 232) {
+        return stormImage;
+    }
+    else if (mainWeather >= 300 && mainWeather <= 321) {
+        return drizzleImage;
+    }
+    else if (mainWeather >= 500 && mainWeather <= 531) {
+        return rainImage;
+    }
+    else if (mainWeather >= 600 && mainWeather <= 622) {
+        return snowImage;
+    }
+    else if (mainWeather == 711) {
+        return smokeImage;
+    }
+    else if (mainWeather == 721) {
+        return hazeImage;
+    }
+    else if (mainWeather == 751) {
+        return sandImage;
+    }
+    else if (mainWeather == 751) {
+        return ashImage;
+    }
+    else if (mainWeather == 761) {
+        return dustImage;
+    }
+    else if (mainWeather == 771) {
+        return squallImage;
+    }
+    else if (mainWeather == 781) {
+        return tornadoImage;
+    }
+    else if (mainWeather == 802 && 803) {
+        return scatteredImage;
+    }
+    else if (mainWeather == 803) {
+        return scatteredImage;
+    }
+    else if (mainWeather == 801) {
+        return fewImage;
+    }
+    else if (mainWeather == 804) {
+        return overcastImage;
+    }
+    else {
+        return defaultImage;
+    }
 }
 
 function searchCity(city) {
@@ -109,15 +182,6 @@ function displayFahrenheitTemp(event) {
     celsiusLink.classList.remove("active");
 }
 
-let mainWeather = response.data.weather[0].id;
-
-function changeBackground() {
-    if (mainWeather === 800) {
-        document.body.classList.add("images/clear-day.gif");
-    } else {
-        document.body.classList.add("images/mist.gif")
-    }
-}
 
 
 
