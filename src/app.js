@@ -182,10 +182,6 @@ function displayFahrenheitTemp(event) {
     celsiusLink.classList.remove("active");
 }
 
-
-
-
-
 let fahrenheitTemperature = null;
 
 let celsiusLink = document.querySelector("#c-link");
