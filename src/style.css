@@ -176,34 +176,38 @@ a {
   text-align: center;
 }
 
+.weather-forecast-temperature-mini {
+  opacity: 0.8;
+}
+
 #dayOne {
   margin: 0 auto;
   padding: 15px;
   position: relative;
-  top: -330px;
+  top: -355px;
   left: -200px;
 }
 
 #dayTwo {
   position: relative;
-  top: -432px;
+  top: -477px;
   left: -100px;
 }
 
 #dayThree {
   position: relative;
-  top: -518px;
+  top: -583px;
 }
 
 #dayFour {
   position: relative;
-  top: -605px;
+  top: -688px;
   left: 100px;
 }
 
 #dayFive {
   position: relative;
-  top: -693px;
+  top: -793px;
   left: 200px;
 }
 
@@ -213,8 +217,8 @@ a {
 #dayFourDate,
 #dayFiveDate {
   font-size: 18px;
-  margin: 0 auto;
-  padding: 30px auto;
+  margin-top: 20px;
+  text-align: center;
 }
 
 #cloud-icon,
