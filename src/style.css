@@ -12,14 +12,6 @@ button {
   text-shadow: 2px 2px #494848;
 }
 
-.form-control::placeholder {
-  color: white;
-  border: white;
-  text-shadow: 2px 2px #494848;
-  opacity: 1;
-  background-image: url(images/mist.gif);
-}
-
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
@@ -34,9 +26,16 @@ button {
 
 .backgroundWeather {
   border: 1px solid #dadde1;
-  height: 325px;
   padding: 20px auto;
   background-size: 600px;
+}
+
+.form-control::placeholder {
+  color: white;
+  border: white;
+  text-shadow: 2px 2px #494848;
+  opacity: 1;
+  background-image: url(images/mist.gif);
 }
 
 .form-control {
@@ -172,71 +171,17 @@ a {
   line-height: 1;
 }
 
-#futureForecast {
+#weather-forecast {
   text-align: center;
+}
+
+#weather-forecast-temperature {
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #494848;
 }
 
 .weather-forecast-temperature-mini {
   opacity: 0.8;
-}
-
-#dayOne {
-  margin: 0 auto;
-  padding: 15px;
-  position: relative;
-  top: -355px;
-  left: -200px;
-}
-
-#dayTwo {
-  position: relative;
-  top: -477px;
-  left: -100px;
-}
-
-#dayThree {
-  position: relative;
-  top: -583px;
-}
-
-#dayFour {
-  position: relative;
-  top: -688px;
-  left: 100px;
-}
-
-#dayFive {
-  position: relative;
-  top: -793px;
-  left: 200px;
-}
-
-#dayOneDate,
-#dayTwoDate,
-#dayThreeDate,
-#dayFourDate,
-#dayFiveDate {
-  font-size: 18px;
-  margin-top: 20px;
-  text-align: center;
-}
-
-#cloud-icon,
-#rain-icon,
-#bolt-icon,
-#wind-icon,
-#snowflake-icon {
-  display: inline;
-  font-size: 30px;
-  padding: 10px auto;
-}
-
-#cloud-icon,
-#rain-icon,
-#bolt-icon,
-#wind-icon,
-#snowflake-icon,
-.forecastTemp {
-  color: white;
-  font-weight: bolder;
 }

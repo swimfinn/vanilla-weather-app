@@ -48,7 +48,7 @@ function displayWeatherCondition(response) {
 
     document.getElementById("backgroundPic").style.backgroundImage = changeBackground(response.data.weather[0].id);
     document.getElementById("search-text-input").style.backgroundImage = changeBackground(response.data.weather[0].id);
-    document.getElementById("::placeholder").style.backgroundImage = changeBackground(response.data.weather[0].id);
+    document.getElementById(":placeholder").style.backgroundImage = changeBackground(response.data.weather[0].id);
     mainweather = response.data.weather[0].id;
 }
 
