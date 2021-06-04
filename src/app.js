@@ -23,10 +23,11 @@ function formatDate(date) {
     return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+    console.log(response.data.daily);
     let forecastElement = document.querySelector("#weatherForecast");
-    let forecastHTML = `<div class="row">`
     let days = ["Saturday", "Sunday", "Monday", "Tuesday"];
+    let forecastHTML = `<div class="row">`
     days.forEach(function (day) {
         forecastHTML = forecastHTML + `
         <div class="col-2">
@@ -45,6 +46,14 @@ function displayForecast() {
     forecastHTML = forecastHTML + `</div>`;
     forecastElement.innerHTML = forecastHTML
 }
+
+function getForecast(coordinates) {
+    console.log(coordinates);
+    let apiKey = "3a8d7f059fc61ac00591426445cb607a";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(displayForecast);
+}
+
 
 function displayWeatherCondition(response) {
     document.querySelector("#city-input").innerHTML = response.data.name;
@@ -71,8 +80,9 @@ function displayWeatherCondition(response) {
 
     document.getElementById("backgroundPic").style.backgroundImage = changeBackground(response.data.weather[0].id);
     document.getElementById("search-text-input").style.backgroundImage = changeBackground(response.data.weather[0].id);
-    document.getElementById(".form-control::placeholder").style.backgroundImage = changeBackground(response.data.weather[0].id);
     mainweather = response.data.weather[0].id;
+
+    getForecast(response.data.coord);
 }
 
 
@@ -215,5 +225,3 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp)
 
 
 searchCity("Portland");
-
-displayForecast();
