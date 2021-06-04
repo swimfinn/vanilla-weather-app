@@ -120,7 +120,7 @@ li {
 .cf {
   font-size: 25px;
   position: relative;
-  top: -260px;
+  top: -270px;
   left: 75px;
 }
 
@@ -159,7 +159,7 @@ a {
 #current-icon {
   position: relative;
   left: 180px;
-  top: -335px;
+  top: -340px;
   width: 25%;
 }
 
@@ -178,20 +178,20 @@ a {
   padding: 30px auto;
   position: relative;
   top: -10px;
-  right: -35px;
 }
 
 .weather-forecast-date {
   font-size: 20px;
   font-weight: bolder;
+  padding: 0px auto;
 }
 
 .weather-forecast-temperatures {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 img {
-  max-width: 75%;
+  max-width: 70%;
 }
 
 .weather-forecast-temperature-mini {

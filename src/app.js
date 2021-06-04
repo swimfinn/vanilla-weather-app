@@ -26,22 +26,24 @@ function formatDate(date) {
 function formatDays(timestamp) {
     let date = new Date(timestamp * 1000);
     let day = date.getDay();
-    let days = ["Sun",
-        "Mon",
+    let days = ["Mon",
         "Tues",
         "Wed",
         "Thurs",
         "Fri",
-        "Sat"];
+        "Sat",
+        "Sun"];
     return days[day];
 }
 
 function displayForecast(response) {
     let forecast = response.data.daily;
+
     let forecastElement = document.querySelector("#weatherForecast");
-    let forecastHTML = `<div class="row">`
+    let forecastHTML = `<div class="row">`;
+
     forecast.forEach(function (forecastDay, index) {
-        if (index < 5) {
+        if (index < 6) {
             forecastHTML =
                 forecastHTML + `
         <div class="col-2">
