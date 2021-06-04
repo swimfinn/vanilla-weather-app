@@ -23,6 +23,29 @@ function formatDate(date) {
     return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+    let forecastElement = document.querySelector("#weatherForecast");
+    let forecastHTML = `<div class="row">`
+    let days = ["Saturday", "Sunday", "Monday", "Tuesday"];
+    days.forEach(function (day) {
+        forecastHTML = forecastHTML + `
+        <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <i class="fas fa-cloud-sun"></i>
+        <div class="weather-forecast-temperatures">
+        <span class="weather-forecast-temperature-max">
+        65°
+        </span> / 
+        <span class="weather-forecast-temperature-mini">
+        54°
+        </span>
+        </div>
+        </div>`;
+    });
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML
+}
+
 function displayWeatherCondition(response) {
     document.querySelector("#city-input").innerHTML = response.data.name;
 
@@ -48,7 +71,7 @@ function displayWeatherCondition(response) {
 
     document.getElementById("backgroundPic").style.backgroundImage = changeBackground(response.data.weather[0].id);
     document.getElementById("search-text-input").style.backgroundImage = changeBackground(response.data.weather[0].id);
-    document.getElementById(":placeholder").style.backgroundImage = changeBackground(response.data.weather[0].id);
+    document.getElementById(".form-control::placeholder").style.backgroundImage = changeBackground(response.data.weather[0].id);
     mainweather = response.data.weather[0].id;
 }
 
@@ -192,3 +215,5 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp)
 
 
 searchCity("Portland");
+
+displayForecast();
