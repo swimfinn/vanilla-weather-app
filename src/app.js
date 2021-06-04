@@ -62,6 +62,7 @@ function displayForecast(response) {
     });
     forecastHTML = forecastHTML + `</div>`;
     forecastElement.innerHTML = forecastHTML
+
 }
 
 function getForecast(coordinates) {
@@ -79,7 +80,6 @@ function displayWeatherCondition(response) {
     temperatureElement.innerHTML = Math.round(
         response.data.main.temp
     );
-    fahrenheitTemperature = response.data.main.temp;
 
     let humidityElement = document.querySelector("#humidity-input")
     humidityElement.innerHTML =
@@ -214,31 +214,6 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let searchButton = document.querySelector("#search-button");
 searchButton.addEventListener("click", handleSubmit);
-
-function displayCelsiusTemp(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#currentTemp");
-    fahrenheitLink.classList.remove("active");
-    celsiusLink.classList.add("active");
-    let celsiusTemperature = (fahrenheitTemperature - 32) * 5 / 9;
-    temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-function displayFahrenheitTemp(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#currentTemp");
-    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-    fahrenheitLink.classList.add("active");
-    celsiusLink.classList.remove("active");
-}
-
-let fahrenheitTemperature = null;
-
-let celsiusLink = document.querySelector("#c-link");
-celsiusLink.addEventListener("click", displayCelsiusTemp)
-
-let fahrenheitLink = document.querySelector("#f-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemp)
 
 
 searchCity("Portland");
