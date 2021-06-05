@@ -58,11 +58,14 @@ function displayForecast(response) {
         </span>
         </div>
         </div>`;
+
+            let max = Math.round(forecastDay.temp.max);
+            let min = Math.round(forecastDay.temp.min)
+
         }
     });
     forecastHTML = forecastHTML + `</div>`;
     forecastElement.innerHTML = forecastHTML
-
 }
 
 function getForecast(coordinates) {
@@ -80,6 +83,7 @@ function displayWeatherCondition(response) {
     temperatureElement.innerHTML = Math.round(
         response.data.main.temp
     );
+    fahrenheitTemperature = response.data.main.temp;
 
     let humidityElement = document.querySelector("#humidity-input")
     humidityElement.innerHTML =
